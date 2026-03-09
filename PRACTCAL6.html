@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seminar Registration</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 480px;
+            box-shadow: 0 0 25px rgba(0,200,255,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a1a2e;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #0f3460;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: white;
+            background: #0f3460;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #0f3460;
+            outline: none;
+            box-shadow: 0 0 5px rgba(15,52,96,0.4);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #444;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 11px;
+            margin-top: 20px;
+            background: linear-gradient(to right, #0f3460, #533483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #533483, #0f3460);
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>🎓 Seminar Registration Form</h2>
+
+        <fieldset>
+            <legend>👤 Participant Details</legend>
+
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter first name">
+
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter last name">
+
+            <label>Phone Number:</label>
+            <input type="number" placeholder="Enter phone number">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter email">
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="g"> Male</label>
+                <label><input type="radio" name="g"> Female</label>
+                <label><input type="radio" name="g"> Other</label>
+            </div>
+
+            <label>Age Group:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="age"> Below 18</label>
+                <label><input type="radio" name="age"> 18-25</label>
+                <label><input type="radio" name="age"> Above 25</label>
+            </div>
+
+            <label>Department:</label>
+            <select>
+                <option>-- Select Department --</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>Mechanical</option>
+            </select>
+
+            <label>Seminar Topic:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> AI & ML</label>
+                <label><input type="checkbox"> Cybersecurity</label>
+                <label><input type="checkbox"> Web Dev</label>
+                <label><input type="checkbox"> Cloud Computing</label>
+            </div>
+
+            <input type="submit" value="Register Now">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
